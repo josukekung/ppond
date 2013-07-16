@@ -31,3 +31,7 @@ body {
 .form-actions {
   background: transparent;
 }
+
+input#targetDate {
+  cursor: pointer;
+}

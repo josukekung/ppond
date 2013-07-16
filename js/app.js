@@ -28,36 +28,37 @@ $(function () {
   // If already logged in
   if (username) {
     $('ul#navPanel').prepend('<li><a>' + username + '</a></li><li><a href="#" id="logout">Log out</a>');
+    $('#targetDate').datepicker({ format: 'dd-mm-yyyy' });
 
-      // Determine form state from userType
-      if (userType === 'customer') {
-        // Log in as customer
+    // Determine form state from userType
+    if (userType === 'customer') {
+      // Log in as customer
 
-        $(document).on('submit', 'form', function (e) {
-          e.preventDefault();
+      $(document).on('submit', 'form', function (e) {
+        e.preventDefault();
 
-          $.post('endpoint/CreateBooking.php', $(this).serialize(), 'json')
-            .done(function (data) {
-              // TODO: Not to parse, return JSON by default
-              data = JSON.parse(data);
+        $.post('endpoint/CreateBooking.php', $(this).serialize(), 'json')
+          .done(function (data) {
+            // TODO: Not to parse, return JSON by default
+            data = JSON.parse(data);
 
-              $.get('endpoint/GetListBookingInfoByCustomerId.json', {
-                customerId: data.customerId
-              })
-                .done(function (data) { generateTable(data, false) });
-            });
-        });
-      }
-      else {
-        // Log in as driver
+            $.get('endpoint/GetListBookingInfoByCustomerId.json', {
+              customerId: data.customerId
+            })
+              .done(function (data) { generateTable(data, false) });
+          });
+      });
+    }
+    else {
+      // Log in as driver
 
-        $('form input[type="text"]').each(function () {
-          $(this).prop('disabled', true);
-        });
+      $('form input[type="text"]').each(function () {
+        $(this).prop('disabled', true);
+      });
 
-        $.get('endpoint/GetAllBookingDef.json')
-          .done(generateTable);
-      }
+      $.get('endpoint/GetAllBookingDef.json')
+        .done(generateTable);
+    }
   }
 
   $(document)
