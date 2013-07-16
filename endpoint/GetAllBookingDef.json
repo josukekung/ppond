@@ -1,0 +1,24 @@
+[
+  {
+     "bookingId":"bookingId1",
+     "driverId":"driver1",
+     "acceptDate":"2013-07-16T21:10:25.1196152+07:00",
+     "deliverDate":"2013-07-16T21:10:25.1196152+07:00",
+     "status":"Inprogress",
+     "productDetail":"deatail1",
+     "address":"address1",
+     "targetDate":"2013-07-16T21:10:25.1186151+07:00",
+     "customerId":"customer1"
+  },
+  {
+     "bookingId":"bookingId2",
+     "driverId":"driver2",
+     "acceptDate":"2013-07-16T21:10:25.133616+07:00",
+     "deliverDate":"2013-07-16T21:10:25.133616+07:00",
+     "status":"Delivering",
+     "productDetail":"deatail2",
+     "address":"address2",
+     "targetDate":"2013-07-16T21:10:25.133616+07:00",
+     "customerId":"customer2"
+  }
+]

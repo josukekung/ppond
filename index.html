@@ -1,9 +1,49 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>P' Pond</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap&#45;responsive.css" /> -->
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="js/jquery-1.10.2.js"></script>
     <script src="js/app.js"></script>
   </head>
   <body>
+    <div class="navbar navbar-static-top">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav pull-right" id="navPanel">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container">
+      <div class="hero-unit login-panel">
+        <div class="wrapper">
+          <h1>Log in</h1>
+          <form id="loginPanel" accept-charset="UTF-8" class="form-horizontal">
+            <div class="control-group">
+              <label class="control-label" for="username">Username</label>
+              <div class="controls">
+                <input id="username" name="username" type="text">
+              </div>
+            </div>
+            <div class="control-group ">
+              <label class="control-label" for="password">Password</label>
+              <div class="controls">
+                <input id="password" name="password" type="password">
+              </div>
+            </div>
+            <div class="form-actions">
+              <input class="btn btn-primary" name="commit" type="submit" value="Log in">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

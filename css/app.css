@@ -1,0 +1,33 @@
+body {
+}
+
+.login-panel {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-panel h1 {
+  margin-bottom: 40px;
+}
+
+.login-panel .wrapper {
+  width: 500px;
+  margin: 30px auto 0;
+}
+
+.login-panel .control-group .controls {
+  text-align: left;
+}
+
+.login-panel .form-actions {
+  padding: 10px;
+}
+
+.form-panel {
+  width: 500px;
+  margin: 30px auto 0;
+}
+
+.form-actions {
+  background: transparent;
+}
